@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <Button
+        android:id="@+id/btn_open_bluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="打开蓝牙" />
+
+    <Button
+        android:id="@+id/btn_close_bluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btn_open_bluetooth"
+        android:text="关闭蓝牙" />
+
+    <Button
+        android:id="@+id/btn_start_discovery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_open_bluetooth"
+        android:text="扫描蓝牙" />
+
+    <Button
+        android:id="@+id/btn_close_discovery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_start_discovery"
+        android:layout_alignBottom="@+id/btn_start_discovery"
+        android:layout_alignLeft="@+id/btn_close_bluetooth"
+        android:text="停止扫描" />
+
+    <Button
+        android:id="@+id/btn_open_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_start_discovery"
+        android:visibility="gone"
+        android:text="开灯" />
+
+    <Button
+        android:id="@+id/btn_close_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_start_discovery"
+        android:layout_toRightOf="@+id/btn_open_light"
+        android:visibility="gone"
+        android:text="关灯" />
+
+    <Button
+        android:id="@+id/btn_open_once"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_close_light"
+        android:layout_alignBottom="@+id/btn_close_light"
+        android:layout_toRightOf="@+id/btn_close_light"
+        android:visibility="gone"
+        android:text="点动" />
+
+	<ListView 
+	    android:id="@+id/lv_bluetooth_devices"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/btn_close_light"
+	    ></ListView>
+</RelativeLayout>
